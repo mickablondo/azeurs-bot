@@ -1,8 +1,18 @@
 import os
+import random
 import discord
 from discord.ext import commands
 
 BAD_WORDS = ["porn", "xxx"]
+
+BLAGUES = [
+    "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ? Parce que sinon ils tombent encore dans le bateau !",
+    "Quel est le comble pour un électricien ? De ne pas être au courant.",
+    "Pourquoi les maths dépriment-elles ? Parce qu'il y a trop de problèmes.",
+    "Que dit une imprimante à une autre imprimante ? T’as besoin de papier ou t’as juste une mauvaise impression ?",
+    "Pourquoi les squelettes ne se battent jamais entre eux ? Parce qu’ils n’ont pas le cœur à ça.",
+    "Pourquoi les maths aiment pas la forêt ? Parce qu’il y a trop de racines."
+]
 
 # intents
 intents = discord.Intents.default()
@@ -51,6 +61,11 @@ async def quiestla(ctx):
     display_list = ", ".join(m.display_name for m in online_members[:25])
     more = f" et {len(online_members)-25} de plus..." if len(online_members) > 25 else ""
     await ctx.send(f"En ligne : {display_list}{more}")
+
+@bot.command()
+async def blague(ctx):
+    blague_choisie = random.choice(BLAGUES)
+    await ctx.send(f"😂 {blague_choisie}")
 
 ##############
 # Evenements #
