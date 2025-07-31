@@ -1,2 +1,2 @@
 # azeurs-bot
-Discord bot with my son
+Discord bot developed with my son 🤩
