@@ -11,7 +11,11 @@ BLAGUES = [
     "Pourquoi les maths dépriment-elles ? Parce qu'il y a trop de problèmes.",
     "Que dit une imprimante à une autre imprimante ? T’as besoin de papier ou t’as juste une mauvaise impression ?",
     "Pourquoi les squelettes ne se battent jamais entre eux ? Parce qu’ils n’ont pas le cœur à ça.",
-    "Pourquoi les maths aiment pas la forêt ? Parce qu’il y a trop de racines."
+    "Pourquoi les maths aiment pas la forêt ? Parce qu’il y a trop de racines.",
+    "Pourquoi les poissons détestent l’ordinateur ? Parce qu’ils ont peur du net.",
+    "Quel est l’animal le plus connecté ? Le pingouin, parce qu’il a un look wifi !",
+    "Pourquoi les canards sont toujours à l’heure ? Parce qu’ils sont dans l’étang (le temps) !",
+    "Docteur, j’ai mal partout ! ... Comment ça ? ... Quand je touche ma tête, j’ai mal… quand je touche mon ventre, j’ai mal… quand je touche ma jambe, j’ai mal… ... Ah je vois : vous avez le doigt cassé !"
 ]
 
 # intents
