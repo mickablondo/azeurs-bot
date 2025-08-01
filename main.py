@@ -15,7 +15,8 @@ BLAGUES = [
     "Pourquoi les poissons détestent l’ordinateur ? Parce qu’ils ont peur du net.",
     "Quel est l’animal le plus connecté ? Le pingouin, parce qu’il a un look wifi !",
     "Pourquoi les canards sont toujours à l’heure ? Parce qu’ils sont dans l’étang (le temps) !",
-    "Docteur, j’ai mal partout ! ... Comment ça ? ... Quand je touche ma tête, j’ai mal… quand je touche mon ventre, j’ai mal… quand je touche ma jambe, j’ai mal… ... Ah je vois : vous avez le doigt cassé !"
+    "Docteur, j’ai mal partout ! ... Comment ça ? ... Quand je touche ma tête, j’ai mal… quand je touche mon ventre, j’ai mal… quand je touche ma jambe, j’ai mal… ... Ah je vois : vous avez le doigt cassé !",
+"Que fait une fraise sur un cheval ? Tagada tagada!" ,
 ]
 
 # intents
@@ -70,6 +71,18 @@ async def quiestla(ctx):
 async def blague(ctx):
     blague_choisie = random.choice(BLAGUES)
     await ctx.send(f"😂 {blague_choisie}")
+
+@bot.command()
+async def pileouface(ctx, *, choix: str):
+    choix = choix.lower()
+    if choix not in ["pile", "face"]:
+        await ctx.send("Veuillez choisir entre 'pile' ou 'face'.")
+        return
+    resultat = random.choice(["pile", "face"])
+    if choix == resultat:
+        await ctx.send(f"Bravo {ctx.author.name}, tu as gagné ! Le résultat était bien {resultat}.")
+        return
+    await ctx.send(f"Dommage {ctx.author.name}, tu as perdu ! Le résultat était {resultat}.")
 
 ##############
 # Evenements #
